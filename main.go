@@ -46,7 +46,6 @@ func readFromStdin() (string, error) {
 			return "", err
 		}
 	}
-	return strings.Join(lines, "\n"), nil
 }
 
 func splitWellFormedString(s string) []string {
@@ -67,7 +66,7 @@ func splitString(s string) []string {
 	if len(bytes) <= 0 {
 		return nil
 	}
-	// nothing happend (maybe this is a 0x120x34 string?)
+	// nothing happened (maybe this is a 0x120x34 string?)
 	if bytes[0] != s {
 		return bytes
 	}
